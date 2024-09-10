@@ -2,77 +2,109 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .95em;
     border: 1px solid lime;
 }
 
-.container{
+.container {
     display: flex;
     border: 1px solid black;
     flex-direction: column;
     /* flex-wrap: wrap; */
     /* justify-content:flex-start; */
-    
     flex-basis: 100%;
-    max-width: 400px;
+    max-width: 350px;
+    padding-inline: 1%;
 }
 
-h2{
+h2 {
+    font-size:2.5em;
     flex-basis: 100%;
     /* align-self:center; */
 }
 
-.serving{
+.serving {
     flex-basis: 100%;
+    text-align: start;
 }
 
-.linethickest{
-    flex-basis: 100%;
-    border-bottom: 10px solid black;
-}
-
-.linethick{
-    flex-basis: 100%;
-    border-bottom: 5px solid black;
-}
-
-.line{
+.line {
     flex-basis: 100%;
     border-bottom: 1px solid black;
 }
 
-.flexrow{
+.thick {
+    border-bottom: 5px solid black;
+}
+
+.thickest {
+    border-bottom: 10px solid black;
+}
+
+.flexrow {
     display: flex;
     flex-direction: row;
 }
 
-
-.tablehead{
-    display: flex;
-    flex-direction: row;
+.tableHead {
+    font-size: .8em;
     align-items: end;
 }
 
-.flexrowcenter{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.columnA{
-    flex: 400;
-}
-
-.columnASub{
-    flex: 384;
-    padding-left: 4%;
-}
-
-.columnB{
-    flex: 100;
-}
-
-.columnC{
+p {
     flex: 100;
     text-align: end;
 }
 
+.columnA {
+    flex: 400;
+    text-align: start;
+}
+
+.columnASub {
+    /* 100% parent = flex: 600 => padding-left: 4% = flex: 24 => 
+    columnA flex: 400 - flex: 24 = flex: 376 */
+    flex: 376;  
+    text-align: start;
+    padding-left: 4%;
+}
+
+.columnB {
+    flex: 150;
+    text-align: start;
+}
+
+.columnBSub {
+    /* 100% parent = flex: 450 => padding-left: 4% = flex: 18 =>
+    columnB flex: 150 - flex: 18 = flex: 132 */
+    flex: 132;
+    text-align: start;
+    padding-left: 4%;
+}
+
+.columnC {
+    flex: 100;
+    text-align: end;
+}
+
+.asterix {
+    display: flex;
+    flex-direction: column;
+}
+
+.asterix *{
+    font-size: .85em;
+    text-align: start;
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.center *{
+    align-self: center;
+    text-align: center;
+}
